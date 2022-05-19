@@ -5,6 +5,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():  # put application's code here
     files = os.listdir('uploads')
@@ -32,5 +33,6 @@ def upload():
 @app.route('/serve-image/<filename>', methods=['GET'])
 def serve_image(filename):
     return send_from_directory('uploads', filename)
+
 
 app.run(host='0.0.0.0', port=81)

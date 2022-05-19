@@ -8,7 +8,7 @@
     <div class="app">
 
         <form action="/upload", method="post", enctype="multipart/form-data">
-            <input type="text", name="filename" value="Name of file">
+            <input type="text", name="filename" value="Image">
             <input type="file", name="file">
             <input type="submit", value="Upload">
         </form>
@@ -17,7 +17,7 @@
         <ul>
         {% for file in files %}
 
-                <li><a href="/serve-image/{{ file }}"> {{ file }}</a></li>
+                <li>/serve-image/{{ file }}</li>
         {% endfor %}
         </ul>
     </div>
