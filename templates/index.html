@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Piracy</title>
+      <link rel="icon" href="https://cdn.discordapp.com/emojis/958419339072139324.webp?size=96&quality=lossless">
+  </head>
+  <body>
+    <div class="app">
+
+        <form action="/upload", method="post", enctype="multipart/form-data">
+            <input type="text", name="filename" value="Name of file">
+            <input type="file", name="file">
+            <input type="submit", value="Upload">
+        </form>
+    </div>
+    <div>
+        <ul>
+        {% for file in files %}
+
+                <li><a href="/serve-image/{{ file }}"> {{ file }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+  </body>
+</html>
