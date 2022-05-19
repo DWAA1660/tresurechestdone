@@ -25,7 +25,7 @@ def upload():
             file.save(f'uploads/{secure_filename(inputefilename.lower()) + extension}')
 
     else:
-        return "Please add a file <a href='/'>Back to home</a>"
+        return "Please add a file <a href='/'>Home</a>"
     return redirect('/')
 
 
